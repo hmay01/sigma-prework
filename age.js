@@ -4,10 +4,10 @@ let currentDate = new Date();
 function getUserDate() {
   const dString = prompt("Enter a date in the format 'YYYY-MM-DD':");
   userDate = new Date(dString);
-  if (userDate.toISOString().slice(0, 10) === dString.slice(0, 10)) {
+  if (!Number.isNaN(Date.parse(userDate))) {
     return userDate;
   } else {
-    alert("Invalid date: please re-enter in the correct format.");
+    alert("Invalid date. Please re-enter in the correct format.");
     getUserDate();
   }
 }
