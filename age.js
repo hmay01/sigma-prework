@@ -8,7 +8,7 @@ function getUserDate() {
     return userDate;
   } else {
     alert("Invalid date: please re-enter in the correct format.");
-    getUserInput();
+    getUserDate();
   }
 }
 
